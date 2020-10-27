@@ -1,3 +1,9 @@
+/* adding animation */
+@keyframes fade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+/* import font custom */
 @font-face{
   font-family: 'IBM Plex Mono';
   src: url(./assets/ibm-plex-mono.woff2),url(./assets/ibm-plex-mono.woff);
@@ -6,7 +12,7 @@
   font-family: 'Young serif';
   src: url(./assets/youngserif.woff2),url(./assets/youngserif.woff);
 }
-
+/* rule the body */
 body{
   font-family: 'IBM Plex Mono';
   font-size: 16px;
@@ -16,6 +22,8 @@ body{
   overflow-x: hidden;
 }
 
+
+/* styling nav */
 nav{
   position: fixed;
   top: 0;
@@ -39,17 +47,14 @@ nav{
 nav.open{
   left: 0;
 }
-h1{
-  font-size:24px;
-  font-weight: 700;
-}
+
 
 nav a{
   color:#ffffff;
   text-decoration: none;
   margin:5px 32px;
 }
-
+/* styling the content */
 main{
  position: relative;
  z-index: 1;
@@ -75,3 +80,48 @@ a.toggle-nav img{
  margin: 0 5px;
  vertical-align: center;
 }
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+section div{
+  width:350px;
+}
+
+section div.content{
+  margin: 0 0 0 60px;
+}
+/* typography */
+h1{
+  font-family: 'Young serif';
+  font-size:48px;
+  font-weight: 700;
+}
+a.button{
+  display: inline-block;
+  background-color: #00b98d;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+div.slides{
+  position: relative;
+  height: 450px;
+}
+
+div.slides img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.slides img:first-child{
+  z-index: 1;
+}
+
